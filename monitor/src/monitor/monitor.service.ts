@@ -16,7 +16,7 @@ export class MonitorService {
       const resultado = await this.coletor.ativos();
       const { dados, dataColeta } = resultado;
       ultimaColeta = dataColeta;
-
+      console.log(dados);
       if (!dados) {
         return { ativos: paraComprar, ultimaColeta };
       }
